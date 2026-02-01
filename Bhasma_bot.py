@@ -19,7 +19,7 @@ def send_telegram(msg):
     })
 
 def check_home_page():
-    r = requests.get(HOME_URL, timeout=10)
+    r = requests.get(HOME_URL, timeout=10, verify=False)
     soup = BeautifulSoup(r.text, "html.parser")
     text = soup.get_text(separator=" ").lower()
 
@@ -29,7 +29,7 @@ def check_home_page():
     return False
 
 def check_services_page():
-    r = requests.get(SERVICES_URL, timeout=10)
+    r = requests.get(SERVICES_URL, timeout=10, verify=False)
     soup = BeautifulSoup(r.text, "html.parser")
 
     for a in soup.find_all("a"):
