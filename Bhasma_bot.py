@@ -2,12 +2,13 @@ import requests
 import time
 import webbrowser
 from bs4 import BeautifulSoup
+import os
 
 
 HOME_URL = "https://www.shrimahakaleshwar.mp.gov.in/"
 SERVICES_URL = "https://www.shrimahakaleshwar.mp.gov.in/services"
-BOT_TOKEN="YOUR_BOT_TOKEN"
-CHAT_ID="YOUR_CHAT_ID"
+BOT_TOKEN=os.getenv("BOT_TOKEN")
+CHAT_ID=os.getenv("CHAT_ID")
 CHECK_INTERVAL=30
 
 def send_telegram(msg):
