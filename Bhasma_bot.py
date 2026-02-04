@@ -42,7 +42,6 @@ def check_services_page():
     return None
 
 print("Monitoring ONLY Bhasma Aarti booking...")
-send_telegram("Bhasma Aarti booking is NOT open yet (test message)")
 alerted=False
 
 while True:
